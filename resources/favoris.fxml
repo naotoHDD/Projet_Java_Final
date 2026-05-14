@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1050.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="FavorisController"
+            stylesheets="@style.css"
+            styleClass="main-bg">
+    <children>
+        
+        <AnchorPane layoutX="0" layoutY="0" prefWidth="235" prefHeight="680" styleClass="sidebar">
+            <children>
+                <Label layoutX="25" layoutY="30" text="TuneMood" styleClass="logo" />
+                <Button layoutX="20" layoutY="90" prefWidth="190" text="👤 Profils" onAction="#ouvrirProfils" styleClass="nav-button" />
+                <Button layoutX="20" layoutY="135" prefWidth="190" text="🏠 Accueil" onAction="#ouvrirAccueil" styleClass="nav-button" />
+                <Button layoutX="20" layoutY="180" prefWidth="190" text="🎵 Bibliothèque" onAction="#ouvrirBibliotheque" styleClass="nav-button" />
+                <Button layoutX="20" layoutY="225" prefWidth="190" text="❤️ Favoris" onAction="#ouvrirFavoris" styleClass="nav-button" />
+                <Button layoutX="20" layoutY="270" prefWidth="190" text="📂 Playlists" onAction="#ouvrirPlaylists" styleClass="nav-button" />
+                <Button layoutX="20" layoutY="315" prefWidth="190" text="📊 Statistiques" onAction="#ouvrirStatistiques" styleClass="nav-button" />
+                <Button layoutX="20" layoutY="360" prefWidth="190" text="ℹ À propos" onAction="#ouvrirAPropos" styleClass="nav-button" />
+                <Label layoutX="25" layoutY="455" text="Mini Spotify local" style="-fx-text-fill: #ff2b2b; -fx-font-weight: bold;" />
+                <Label layoutX="25" layoutY="485" text="JavaFX + POO" style="-fx-text-fill: #999999;" />
+            </children>
+        </AnchorPane>
+    
+
+        <Label layoutX="275" layoutY="35" text="Favoris" styleClass="title" />
+        <Label fx:id="profilLabel" layoutX="280" layoutY="88" text="Profil :" styleClass="label-light" />
+        <ListView fx:id="favorisList" layoutX="275" layoutY="130" prefHeight="390" prefWidth="650" />
+        <Button text="Retirer des favoris" layoutX="275" layoutY="545" prefWidth="190" prefHeight="38"
+                onAction="#retirerFavori" styleClass="red-button" />
+
+    </children>
+</AnchorPane>
